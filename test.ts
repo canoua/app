@@ -48,3 +48,19 @@ function getSum(a: number | number[]) {
 
 const x: undefined = undefined;
 const z: null = null;
+
+//3.5 - interfaces and types
+function print(coord: {x: number, y: number}) {
+}
+
+//предыдущую функцию можно переписать след образом
+type Point = {
+  x: number, 
+  y: number
+}
+
+function print(coord: Point) {}
+
+// 3.6 Представьте, что с какого-то api, с которым вы интегрируетесь, на ваш бэкенд приходит data.json
+// Наша задача описать его так, чтобы мы после этого могли типизировано оперировать с данными, которые пришли из json
+// То есть нам надо описать один или несколько интерфейсов, которые описывают эти данные
