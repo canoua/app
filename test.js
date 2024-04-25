@@ -1,4 +1,7 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+// import '3.7/';
+const literal_1 = require("./3.7/literal");
 let a = 4;
 let b = 'string';
 let d = ['a', 'b', 'c'];
@@ -42,18 +45,4 @@ const z = null;
 //3.5 - interfaces and types
 function print(coord) {
 }
-function print(coord) { }
-// 3.6 Представьте, что с какого-то api, с которым вы интегрируетесь, на ваш бэкенд приходит data.json
-// Наша задача описать его так, чтобы мы после этого могли типизировано оперировать с данными, которые пришли из json
-// То есть нам надо описать один или несколько интерфейсов, которые описывают эти данные
-let requestURL = "https://my-json-server.typicode.com/canoua/data-json";
-let request = new XMLHttpRequest();
-request.open("GET", requestURL);
-request.responseType = "json";
-request.send();
-request.onload = function () {
-    let superHeroes = request.response;
-    // populateHeader(superHeroes);
-    // showHeroes(superHeroes);
-    console.log(superHeroes);
-};
+(0, literal_1.literal)();
