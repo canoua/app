@@ -2,15 +2,13 @@
 let c: 'test' = 'test'; 
 
 // покажем другой пример
-
 type actionType = 'up' | 'down';
 
-// ошибка
-function performeAction(action: actionType): 1 | 2 {
-  switch(action) {
+function performAction(action: actionType): -1 | 2 {
+  switch (action) {
     case 'down':
-      return 1;
-      console.log('up');
+      return -1;
+    case "up": 
+      return 2;
   }
-  // return 1;
 }
