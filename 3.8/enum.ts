@@ -1,6 +1,5 @@
 enum Direction {
   up = 1,
-  // down = 2
   down
 }
 
@@ -42,3 +41,24 @@ const enum ConstEnum {
 
 let D = ConstEnum.A; // d=0
 
+// пример
+enum Dice {
+  One = 1,
+  Two, 
+  Tree
+}
+
+function ruDice(dice: Dice) {
+  switch(dice) {
+    case Dice.One:
+      return 'один'
+    case Dice.Two:
+      return 'два'
+    case Dice.Tree:
+      return 'три'
+    default:
+      const a: never = dice;
+  }
+}
+
+console.log(ruDice(Dice.One));
