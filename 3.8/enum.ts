@@ -31,7 +31,14 @@ let nameA = Test[testVar];
 // выведет 0
 console.log(testVar);
 
-// выведет А
+// выведет А // получили строковое представление
 console.log(nameA);
 
+
+const enum ConstEnum {
+  A,
+  B
+}
+
+let D = ConstEnum.A; // d=0
 
